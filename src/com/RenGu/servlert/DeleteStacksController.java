@@ -114,7 +114,11 @@ public class DeleteStacksController extends HttpServlet {
 
     private void deleteStack(String stacksName, String stackID, String loginToken, String orchestrationEndpoint, String requestID, HttpServletResponse resp) {
         try {
-            if (stacksName.equals("") || loginToken.equals("") || orchestrationEndpoint.equals("") || stackID.equals("") || requestID.equals("")) {
+            if(stackID.equals("")){
+                resp.getWriter().write(CommonUtil.getWrappMessge("000002", "Stacks Not Found!", requestID));
+                return;
+            }
+            if (stacksName.equals("") || loginToken.equals("") || orchestrationEndpoint.equals("") || requestID.equals("")) {
                 resp.getWriter().write(CommonUtil.getWrappMessge("000001", "Request parameters parse failed!", requestID));
                 return;
             }
