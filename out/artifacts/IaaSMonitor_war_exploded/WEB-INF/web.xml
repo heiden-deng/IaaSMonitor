@@ -11,6 +11,30 @@
         <servlet-name>MainController</servlet-name>
         <servlet-class>com.RenGu.servlert.MainController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UserController</servlet-name>
+        <servlet-class>com.RenGu.servlert.UserController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreatStacksController</servlet-name>
+        <servlet-class>com.RenGu.servlert.CreatStacksController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsoleController</servlet-name>
+        <servlet-class>com.RenGu.servlert.ConsoleController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SyncUsersController</servlet-name>
+        <servlet-class>com.RenGu.servlert.SyncUsersController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TestServlet</servlet-name>
+        <servlet-class>com.RenGu.servlert.DispatcherController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteStacksController</servlet-name>
+        <servlet-class>com.RenGu.servlert.DeleteStacksController</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
@@ -19,6 +43,30 @@
     <servlet-mapping>
         <servlet-name>MainController</servlet-name>
         <url-pattern>/mainController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserController</servlet-name>
+        <url-pattern>/userController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreatStacksController</servlet-name>
+        <url-pattern>/CreatStacks</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsoleController</servlet-name>
+        <url-pattern>/console</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SyncUsersController</servlet-name>
+        <url-pattern>/syncusers</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/pageDispatcher</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteStacksController</servlet-name>
+        <url-pattern>/deleteStacksController</url-pattern>
     </servlet-mapping>
 
     <welcome-file-list>
