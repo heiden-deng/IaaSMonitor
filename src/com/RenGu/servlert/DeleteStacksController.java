@@ -123,7 +123,7 @@ public class DeleteStacksController extends HttpServlet {
                 return;
             }
             HttpServers.doDelete(orchestrationEndpoint + "/stacks/" + stacksName + "/" + stackID, loginToken);
-            resp.getWriter().write(CommonUtil.getWrappMessge("000000", "removed", requestID));
+            resp.getWriter().write(CommonUtil.getWrappMessge("000000", "Removed", requestID));
         } catch (IOException e) {
             e.printStackTrace();
         }

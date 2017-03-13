@@ -37,7 +37,7 @@ public class QueryStackThread implements Runnable {
 
                 if (stackStaue.equals("CREATE_FAILED")) {
                     String errorMessage = stackJsonObject.getString("stack_status_reason");
-                    HttpServers.sendBackStackInfo("http://172.17.70.202:9090/create_return.action", CommonUtil.getWrappMessge("000001", errorMessage,frontId));
+                    HttpServers.sendBackStackInfo("http://172.17.203.182/hadoop-service/create_return.action", CommonUtil.getWrappMessge("000001", errorMessage,frontId));
                     return;
                 }
                 if (stackJsonObject.has("outputs")) {
@@ -94,7 +94,7 @@ public class QueryStackThread implements Runnable {
             String splitFlag = "|";
 
             String result = CommonUtil.getRightMessage("000000", CommonUtil.arryToString(ips, splitFlag), CommonUtil.arryToString(nameArray, splitFlag), CommonUtil.arryToString(passArray, splitFlag),frontId);
-            String sendResutl = HttpServers.sendBackStackInfo("http://172.17.70.202:9090/create_return.action", result);
+            String sendResutl = HttpServers.sendBackStackInfo("http://172.17.203.182/hadoop-service/create_return.action", result);
         } else {
             System.out.println(CommonUtil.getWrappMessge("000001", "Create Failed!",frontId));
         }
